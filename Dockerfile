@@ -23,7 +23,7 @@ RUN cd /usr/src/nginx \
 RUN cd /usr/src/nginx \
 	&& ./configure --with-compat --add-dynamic-module=spnego-http-auth-nginx-module \
 	&& make modules \
-	&& cp objs/ngx_http_auth_spnego_module.so /etc/nginx/modules/
+	&& cp objs/ngx_http_auth_spnego_module.so /etc/nginx/modules/ 
 
 COPY nginx.conf /etc/nginx/nginx.conf
 #ADD https://healthcatalyst.github.io/InstallScripts/setupkeytab.txt /opt/install/setupkeytab.sh
